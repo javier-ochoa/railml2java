@@ -1,14 +1,11 @@
-<?xml  version='1.0' encoding='utf-8' ?>
-<xs:schema targetNamespace="https://www.railml.org/schemas/3.2" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:rail3="https://www.railml.org/schemas/3.2" elementFormDefault="qualified" version="3.2">
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="https://www.railml.org/schemas/3.1" xmlns:rail3="https://www.railml.org/schemas/3.1" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" version="3.1">
 	<xs:annotation>
-		<xs:documentation>Copyright (c) railML.org e.V. Dresden/Germany; All Rights Reserved.&#xD;
-&#xD;
-This work is licensed under the restricted CreativeCommons Attribution-NonCommercial-NoDerivatives 4.0 International License with additional license conditions of railML.org.&#xD;
-&#xD;
-For further information see: https://www.railml.org/licence&#xD;
-Content of this file: XML Schema for railML(R) 3.2 definition of root element "railML", refers to elements of all sub schemas from "xs:include" paths</xs:documentation>
+		<xs:documentation>Copyright (c) railML.org e.V. Dresden/Germany; All Rights Reserved.
+This work is licensed under the restricted CreativeCommons Attribution-NonCommercial-NoDerivatives 4.0 International License with additional license conditions of railML.org.
+For further information see: https://www.railml.org/licence
+Content of this file: XML Schema for railML(R) 3.1 Definition of root element "railML", refers to elements of all sub schemas from "xs:include" paths</xs:documentation>
 	</xs:annotation>
-	<xs:include schemaLocation="visualizations3.xsd"/>
 	<xs:include schemaLocation="timetable3.xsd"/>
 	<xs:include schemaLocation="rollingstock3.xsd"/>
 	<xs:include schemaLocation="interlocking3.xsd"/>
@@ -20,6 +17,7 @@ Content of this file: XML Schema for railML(R) 3.2 definition of root element "r
 			<xs:documentation>This is the root element of any railML file.</xs:documentation>
 		</xs:annotation>
 		<xs:all>
+			<xs:element name="metadata" type="rail3:Metadata" minOccurs="0" maxOccurs="1"/>
 			<xs:element name="common" type="rail3:Common" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>root element for railML3 common model</xs:documentation>
@@ -35,7 +33,6 @@ Content of this file: XML Schema for railML(R) 3.2 definition of root element "r
 					<xs:documentation>root element for railML3 interlocking model</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="metadata" type="rail3:Metadata" minOccurs="0" maxOccurs="1"/>
 			<xs:element name="rollingstock" type="rail3:Rollingstock" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>root element for railML3 rollingstock model</xs:documentation>
@@ -44,11 +41,6 @@ Content of this file: XML Schema for railML(R) 3.2 definition of root element "r
 			<xs:element name="timetable" type="rail3:Timetable" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>root element for railML3 timetable model</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="visualizations" type="rail3:Visualizations" minOccurs="0" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>root element for railML3 visualizations model</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:all>
