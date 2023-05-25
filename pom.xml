@@ -5,7 +5,7 @@
 
   <groupId>com.aorkado</groupId>
   <artifactId>railml2java</artifactId>
-  <version>3.2-Final</version>
+  <version>3.2.0</version>
   <packaging>jar</packaging>
 
   <name>RailML2Java</name>
