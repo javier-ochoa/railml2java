@@ -7,7 +7,45 @@
   <artifactId>railml2java</artifactId>
   <version>3.2-Final</version>
   <packaging>jar</packaging>
+
   <name>RailML2Java</name>
+  <url>https://github.com/javier-ochoa/railml2java</url>
+
+  <licenses>
+    <license>
+      <name>The 3-Clause BSD License</name>
+      <url>https://opensource.org/license/bsd-3-clause/</url>
+    </license>
+  </licenses>
+
+  <developers>
+    <developer>
+      <name>Javier Ochoa</name>
+      <email>aorkado@hotmail.com</email>
+      <roles>
+        <role>Developer</role>
+      </roles>
+    </developer>
+  </developers>
+
+  <scm>
+    <connection>scm:git:git://github.com/javier-ochoa/railml2java.git</connection>
+    <developerConnection>scm:git:ssh://github.com:javier-ochoa/railml2java.git</developerConnection>
+    <url>https://github.com/javier-ochoa/railml2java/tree/master</url>
+  </scm>
+
+  <issueManagement>
+    <system>GitHub Issues</system>
+    <url>https://github.com/javier-ochoa/railml2java/issues</url>
+  </issueManagement>
+
+  <distributionManagement>
+    <repository>
+      <id>github</id>
+      <name>GitHub Packages</name>
+      <url>https://maven.pkg.github.com/octocat/hello-world</url>
+    </repository>
+  </distributionManagement>
 
   <properties>
     <maven.compiler.release>17</maven.compiler.release>
@@ -32,8 +70,9 @@
               <sources>
                 <source>src/main/resources/schema/railml3.xsd</source>
               </sources>
-              <packageName>railml</packageName>
+              <packageName>com.aorkado.railml</packageName>
               <outputDirectory>${basedir}/src/main/java</outputDirectory>
+              <clearOutputDir>true</clearOutputDir>
             </configuration>
           </execution>
         </executions>
